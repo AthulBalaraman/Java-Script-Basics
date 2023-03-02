@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div style="text-align:center;">
+    <h3>Accept a char input from the user and display it on the console</h3>
+  </div>
+  <div style="text-align: center;">
+    <span>Enter the char</span>
+    <input type="text" id="character">
+    <br><br>
+     <button onclick="displayChar()">Submit</button>
+  </div><br><br>
+
+  <div style="text-align:center">
+    <span id="displayCharacter"></span>
+  </div>
+</body>
+
+
+<script>
+  function displayChar(){
+    var character = document.getElementById("character").value.charAt(0);
+    document.getElementById("displayCharacter").innerHTML = character
+
+  }
+</script>
+
+</html>

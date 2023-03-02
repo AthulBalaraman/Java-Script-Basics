@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div style="text-align: center;">
+  <h2>A program to find the sum of all the odd numbers for a given limit : </h2>
+  </div>
+  <div style="text-align: center;">
+    <span>Enter a limit :</span>
+    <input type="number"  id="limit"><br><br>
+    <button onclick="find()">Submit</button><br><br>
+    <div style="text-align: center;" id="outputDisplay">
+    <span id="text"></span>
+    </div>
+  </div>
+</body>
+
+<script>
+  function find(){
+    let outputDisplay = document.getElementById("outputDisplay");
+    let limit = Number(document.getElementById("limit").value);
+    document.getElementById("text").innerHTML =" The odd numbers upto the limit is as follows:"
+    var br = document.createElement("br");
+    outputDisplay.appendChild(br);
+    
+    for (var i=1;i<=limit;i++){
+      if (i%2!=0)
+      {
+        var span = document.createElement("span");
+        span.textContent = i + "  "
+        outputDisplay.appendChild(span);
+      }
+    }
+  }
+</script>
+
+</html>

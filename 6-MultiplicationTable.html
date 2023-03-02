@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div style="text-align:center">
+  <h2>A program to dispaly the multiplication table of a given number : </h2>
+  </div>
+  <div style="text-align: center;">
+  <span>Enter a numebr : </span>
+  <input type="number" id="number"><br><br>
+  <button onclick="getTable()">Get multiplication table</button><br><br>
+  <div style="text-align: center;" id="table">
+  
+  </div>
+  </div>
+</body>
+
+<script>
+  function getTable(){
+    let tableDiv = document.getElementById("table");
+    let number = Number(document.getElementById("number").value)
+    let value;
+    for(var i=1;i<=10;i++){
+      value = i * number;
+      let span = document.createElement("span");
+      span.textContent = i+" * "+number+" = "+value;
+      span.style.color="red";
+      // document.body.appendChild(span);
+      tableDiv.appendChild(span)
+      let br = document.createElement("br");
+      // document.body.appendChild(br);
+      tableDiv.appendChild(br)
+    }
+  }
+</script>
+</html>

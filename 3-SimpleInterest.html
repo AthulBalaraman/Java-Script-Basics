@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="text-align: center">
+      <h2>A program to find the simple interest</h2>
+    </div>
+    <div style="text-align: center">
+      <span>Enter the principal amount : </span>
+      <input type="number" id="principal" /><br /><br />
+      <span>Enter the interest rate : </span>
+      <input type="number" id="rate" /><br /><br />
+      <span>Enter the number of years : </span>
+      <input type="number" id="year" /><br /><br />
+      <button onclick="calculate()">Calculate SI</button><br /><br />
+      <div style="text-align: center" id="displaySI"></div>
+    </div>
+  </body>
+
+  <script>
+    function calculate() {
+      var principal = document.getElementById("principal").value;
+      var year = document.getElementById("year").value;
+      var rate = document.getElementById("rate").value;
+      var SI = (principal * year * rate) / 100;
+      document.getElementById(
+        "displaySI"
+      ).innerHTML = `<span>Simple interest for the above details is : Rs. ${SI}</span>`;
+    }
+  </script>
+</html>

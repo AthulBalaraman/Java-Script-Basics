@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div style="text-align:center">
+    <h2>A switch case program to display days according to number inputed</h2>
+  </div>
+  <div style="text-align: center;">
+    <span>Enter a number from 1 to 7 : </span>
+    <input type="number" id="number"><br><br>
+    <button onclick="check()">Get Your Day</button><br><br>
+    <div style="text-align: center;">
+    <span id="displayDay"></span>
+    </div>
+  </div>
+</body>
+
+<script>
+
+function check(){
+  const number = Number(document.getElementById("number").value);
+  switch (number) {
+    case 1:
+      document.getElementById("displayDay").innerHTML = "It is monday"
+      break;
+    case 2:
+      document.getElementById("displayDay").innerHTML = "It is tuesday"
+      break;
+    case 3:
+      document.getElementById("displayDay").innerHTML = "It is wednesday"
+      break;
+    case 4:
+      document.getElementById("displayDay").innerHTML = "It is thursday"
+      break;
+    case 5:
+      document.getElementById("displayDay").innerHTML = "It is friday"
+      break;
+    case 6:
+      document.getElementById("displayDay").innerHTML = "It is saturday"
+      break;
+    case 7:
+      document.getElementById("displayDay").innerHTML = "It is sunday"
+      break;
+    default:
+      document.getElementById("displayDay").innerHTML = "Enter valid number"
+
+  }
+}
+
+</script>
+</html>

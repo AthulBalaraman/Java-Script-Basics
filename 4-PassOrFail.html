@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div style="text-align:center">
+  <h2>
+    A program to check whether a student has passed or failed.
+  </h2>
+  </div>
+  <div style="text-align: center;">
+    <span>Enter the marks : </span>
+    <input type="number" id="mark"><br><br>
+    <button onclick="check()">Check</button>
+    <div style="text-align:center;"><br><br>
+      <span id="result"></span>
+    </div>
+  </div>
+</body>
+
+<script>
+  function check(){
+    var mark = document.getElementById("mark").value;
+    if(mark >= 50 && mark<=100){
+      document.getElementById("result").innerHTML = "Passed"
+    }
+    else if(mark<50 && mark>=0){
+     document.getElementById("result").innerHTML = "Failed"
+    }
+    else{
+      document.getElementById("result").innerHTML = "Enter valid mark"
+    }
+  }
+</script>
+
+</html>
